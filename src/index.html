@@ -9,7 +9,6 @@
 </head>
 <body>
 <div class="app">
-
 <!-- ═══════════ HOME ═══════════ -->
 <div class="page active" id="pg-home">
   <div class="topbar">
@@ -23,43 +22,32 @@
     </div>
   </div>
   <div class="rule"></div>
-
   <div class="hero">
     <div class="hero-label">Bem-vindo ao +Foco</div>
     <div class="hero-title">Controle o seu<br><em>foco</em> e ganhe pontos</div>
     <div class="hero-sub">Use o Pomodoro para acumular pontos e resgate recompensas personalizadas.</div>
   </div>
-
   <div class="nav-grid">
     <div class="nav-card full" onclick="goPage('pg-rewards')">
-      <div class="nav-icon">
-        <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
-      </div>
+      <div class="nav-icon"><svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg></div>
       <div>
         <div class="nav-label">Minhas Recompensas</div>
         <div class="nav-sub">Cadastre e resgate recompensas</div>
       </div>
       <div class="nav-arrow">&#8250;</div>
     </div>
-
     <div class="nav-card" onclick="goPage('pg-pomodoro')">
-      <div class="nav-icon">
-        <svg viewBox="0 0 24 24"><circle cx="12" cy="13" r="9"/><path d="M12 7v6l4 2"/><path d="M8 2h8"/></svg>
-      </div>
+      <div class="nav-icon"><svg viewBox="0 0 24 24"><circle cx="12" cy="13" r="9"/><path d="M12 7v6l4 2"/><path d="M8 2h8"/></svg></div>
       <div class="nav-label">Pomodoro</div>
       <div class="nav-sub">Timer de foco</div>
       <div class="nav-badge">+1 pts/min</div>
     </div>
-
     <div class="nav-card" onclick="goPage('pg-sobre')">
-      <div class="nav-icon">
-        <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
-      </div>
+      <div class="nav-icon"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg></div>
       <div class="nav-label">Sobre Nos</div>
       <div class="nav-sub">O projeto +FOCO</div>
     </div>
   </div>
-
   <div class="footer-bar">
     <button class="footer-btn" onclick="goPage('pg-apoie')">&#9829; Apoie</button>
     <span class="footer-copy">&#169; +Foco</span>
@@ -78,13 +66,10 @@
     </div>
   </div>
 </div>
-
 <!-- ═══════════ POMODORO SELECT ═══════════ -->
 <div class="page" id="pg-pomodoro">
   <div class="section-head">
-    <button class="back-btn" onclick="goPage('pg-home')">
-      <svg viewBox="0 0 24 24"><polyline points="15 18 9 12 15 6"/></svg>
-    </button>
+    <button class="back-btn" onclick="goPage('pg-home')"><svg viewBox="0 0 24 24"><polyline points="15 18 9 12 15 6"/></svg></button>
     <div class="section-title">Pomodoro</div>
     <div class="balance-wrap">
       <div class="balance-pill"><span id="pomo-pts">0</span><span class="label">pts</span></div>
@@ -92,9 +77,7 @@
     </div>
   </div>
   <div class="rule"></div>
-
   <div style="font-size:11px;color:var(--ink3);text-align:center;margin-bottom:18px;font-family:var(--mono);letter-spacing:2px;text-transform:uppercase;">Escolha seu timer</div>
-
   <div class="pomo-options">
     <div class="pomo-card" onclick="startPomodoro(25,5)">
       <svg viewBox="0 0 24 24"><circle cx="12" cy="13" r="9"/><path d="M12 7v6l4 2"/><path d="M8 2h8"/></svg>
@@ -109,22 +92,13 @@
       <div class="pomo-hint">min foco / descanso</div>
     </div>
   </div>
-
-  <div class="info-strip">
-    Ganhe <strong>+1 ponto</strong> a cada minuto completo de trabalho focado.
-  </div>
-
-  <div class="footer-bar" style="margin-top:auto;padding-top:20px;">
-    <div class="footer-copy" style="margin:0 auto;">&#169; +Foco</div>
-  </div>
+  <div class="info-strip">Ganhe <strong>+1 ponto</strong> a cada minuto completo de trabalho focado.</div>
+  <div class="footer-bar" style="margin-top:auto;padding-top:20px;"><div class="footer-copy" style="margin:0 auto;">&#169; +Foco</div></div>
 </div>
-
 <!-- ═══════════ TIMER ACTIVE ═══════════ -->
 <div class="page" id="pg-timer">
   <div class="section-head">
-    <button class="back-btn" onclick="confirmLeaveTimer()">
-      <svg viewBox="0 0 24 24"><polyline points="15 18 9 12 15 6"/></svg>
-    </button>
+    <button class="back-btn" onclick="confirmLeaveTimer()"><svg viewBox="0 0 24 24"><polyline points="15 18 9 12 15 6"/></svg></button>
     <div class="section-title">Em Foco</div>
     <div class="balance-wrap">
       <div class="balance-pill"><span id="timer-pts">0</span><span class="label">pts</span></div>
@@ -132,7 +106,6 @@
     </div>
   </div>
   <div class="rule"></div>
-
   <div class="timer-wrap">
     <div class="timer-phase" id="timer-phase">TEMPO DE TRABALHO</div>
     <div class="timer-clock" id="timer-clock">25:00</div>
@@ -146,9 +119,7 @@
         style="transition:stroke-dashoffset 1s linear,stroke .5s;"/>
     </svg>
     <div class="timer-controls">
-      <button class="t-btn stop" onclick="confirmLeaveTimer()" title="Parar">
-        <svg viewBox="0 0 24 24"><rect x="5" y="5" width="14" height="14" rx="2" fill="rgba(255,255,255,0.6)" stroke="none"/></svg>
-      </button>
+      <button class="t-btn stop" onclick="confirmLeaveTimer()" title="Parar"><svg viewBox="0 0 24 24"><rect x="5" y="5" width="14" height="14" rx="2" fill="rgba(255,255,255,0.6)" stroke="none"/></svg></button>
       <button class="t-btn pause" id="pause-btn" onclick="toggleTimer()">
         <svg id="pause-icon" viewBox="0 0 24 24">
           <rect x="6" y="4" width="4" height="16" fill="rgba(255,255,255,0.85)" stroke="none"/>
@@ -157,22 +128,13 @@
       </button>
     </div>
   </div>
-
-  <div class="info-strip">
-    Mantenha o foco ate o fim do ciclo para maximizar seus pontos.
-  </div>
-
-  <div class="footer-bar" style="margin-top:auto;padding-top:20px;">
-    <div class="footer-copy" style="margin:0 auto;">&#169; +Foco</div>
-  </div>
+  <div class="info-strip">Mantenha o foco ate o fim do ciclo para maximizar seus pontos.</div>
+  <div class="footer-bar" style="margin-top:auto;padding-top:20px;"><div class="footer-copy" style="margin:0 auto;">&#169; +Foco</div></div>
 </div>
-
 <!-- ═══════════ RECOMPENSAS ═══════════ -->
 <div class="page" id="pg-rewards">
   <div class="section-head">
-    <button class="back-btn" onclick="goPage('pg-home')">
-      <svg viewBox="0 0 24 24"><polyline points="15 18 9 12 15 6"/></svg>
-    </button>
+    <button class="back-btn" onclick="goPage('pg-home')"><svg viewBox="0 0 24 24"><polyline points="15 18 9 12 15 6"/></svg></button>
     <div class="section-title">Recompensas</div>
     <div class="balance-wrap">
       <div class="balance-pill"><span id="rwd-pts">0</span><span class="label">pts</span></div>
@@ -180,21 +142,17 @@
     </div>
   </div>
   <div class="rule"></div>
-
   <div class="rewards-header">
     <div class="rewards-count" id="rwd-count">0 / 3</div>
-    
-    <button class="add-reward-btn" id="add-btn" onclick="toggleAddForm()">
-      <svg viewBox="0 0 24 24"></svg>
+    <button class="add-reward-btn" id="howto-btn" onclick="openHowToModal()">
+      <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><line x1="12" y1="16" x2="12" y2="12"/><line x1="12" y1="8" x2="12.01" y2="8"/></svg>
       Como usar?
     </button>
-
     <button class="add-reward-btn" id="add-btn" onclick="toggleAddForm()">
       <svg viewBox="0 0 24 24"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
       Nova
     </button>
   </div>
-
   <div class="add-form" id="add-form">
     <div class="form-label">Nova Recompensa</div>
     <div class="input-row">
@@ -206,92 +164,67 @@
       <button class="btn-cancel" onclick="toggleAddForm()">Cancelar</button>
     </div>
   </div>
-
   <div class="rewards-list" id="rewards-list"></div>
   <div class="limit-note" id="limit-note"></div>
-
-  <div class="footer-bar" style="margin-top:auto;padding-top:10px;">
-    <div class="footer-copy" style="margin:0 auto;">&#169; +Foco</div>
-  </div>
+  <div class="footer-bar" style="margin-top:auto;padding-top:10px;"><div class="footer-copy" style="margin:0 auto;">&#169; +Foco</div></div>
 </div>
-
 <!-- ═══════════ APOIE ═══════════ -->
 <div class="page" id="pg-apoie">
   <div class="section-head">
-    <button class="back-btn" onclick="goPage('pg-home')">
-      <svg viewBox="0 0 24 24"><polyline points="15 18 9 12 15 6"/></svg>
-    </button>
+    <button class="back-btn" onclick="goPage('pg-home')"><svg viewBox="0 0 24 24"><polyline points="15 18 9 12 15 6"/></svg></button>
     <div class="section-title">Apoie o Projeto</div>
     <div style="width:36px"></div>
   </div>
   <div class="rule"></div>
-
   <div class="pix-card">
     <div style="font-size:12px;color:var(--ink3);text-align:center;font-family:var(--mono);text-transform:uppercase;letter-spacing:1.5px;">Escaneie ou copie a chave PIX</div>
-    <div class="qr-frame">
-      <img src="imgpix.jpg">
-    </div>
+    <div class="qr-frame"><img src="imgpix.jpg"></div>
     <button class="pix-btn" onclick="copiarPix()">
       <svg viewBox="0 0 24 24"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
       Copiar Chave PIX
     </button>
     <div class="pix-key" id="pix-key-display"></div>
   </div>
-
   <button class="ad-btn" onclick="assistirAD()">
     <svg viewBox="0 0 24 24"><polygon points="5 3 19 12 5 21 5 3"/></svg>
     Assistir anuncio para apoiar
   </button>
-
-  <div class="info-strip">
-    Seu apoio ajuda a manter o +FOCO gratuito e em constante evolucao. Obrigado! &#9829;
-  </div>
-
-  <div class="footer-bar" style="margin-top:auto;padding-top:20px;">
-    <div class="footer-copy" style="margin:0 auto;">&#169; +Foco</div>
-  </div>
+  <div class="info-strip">Seu apoio ajuda a manter o +FOCO gratuito e em constante evolucao. Obrigado! &#9829;</div>
+  <div class="footer-bar" style="margin-top:auto;padding-top:20px;"><div class="footer-copy" style="margin:0 auto;">&#169; +Foco</div></div>
 </div>
-
 <!-- ═══════════ SOBRE ═══════════ -->
 <div class="page" id="pg-sobre">
   <div class="section-head">
-    <button class="back-btn" onclick="goPage('pg-home')">
-      <svg viewBox="0 0 24 24"><polyline points="15 18 9 12 15 6"/></svg>
-    </button>
+    <button class="back-btn" onclick="goPage('pg-home')"><svg viewBox="0 0 24 24"><polyline points="15 18 9 12 15 6"/></svg></button>
     <div class="section-title">Sobre Nos</div>
     <div style="width:36px"></div>
   </div>
   <div class="rule"></div>
-
   <div class="sobre-nav">
-    <button class="nav-arrow-btn" id="prev-pg" onclick="changeSobrePg(-1)" disabled>
-      <svg viewBox="0 0 24 24"><polyline points="15 18 9 12 15 6"/></svg>
-    </button>
+    <button class="nav-arrow-btn" id="prev-pg" onclick="changeSobrePg(-1)" disabled><svg viewBox="0 0 24 24"><polyline points="15 18 9 12 15 6"/></svg></button>
     <div class="pg-dots">
       <div class="dot active" id="dot-0"></div>
       <div class="dot" id="dot-1"></div>
       <div class="dot" id="dot-2"></div>
+      <div class="dot" id="dot-3"></div>
     </div>
-    <button class="nav-arrow-btn" id="next-pg" onclick="changeSobrePg(1)">
-      <svg viewBox="0 0 24 24"><polyline points="9 18 15 12 9 6"/></svg>
-    </button>
+    <button class="nav-arrow-btn" id="next-pg" onclick="changeSobrePg(1)"><svg viewBox="0 0 24 24"><polyline points="9 18 15 12 9 6"/></svg></button>
   </div>
-
   <div class="sobre-page active" id="sobre-0">
     <div class="sobre-card">
       <p><strong>Projeto UniLaSalle &mdash; RJ</strong></p>
       <p>O +FOCO foi idealizado e realizado por Enzo Carvalho Martins e Felipe Mitraud Kraft da Universidade UniLaSalle com o objetivo de conscientizar sobre o uso excessivo de telas.</p>
-      <p>Atraves de recursos como monitoramento em tempo real e metas personalizaveis, buscamos promover a saude digital de forma pratica e intuitiva.</p>
-      <p>Nosso app pode te auxiliar caso voce enfrente deficits cognitivos, disturbios do sono, problemas visuais, ansiedade, estresse ou depressao. Sempre recomendamos buscar um profissional de saude.</p>
+      <p>Através de recursos como monitoramento em tempo real e metas personalizáveis, buscamos promover a saúde digital de forma prática e intuitiva.</p>
+      <p>Nosso app pode te auxiliar caso voce enfrente déficits cognitivos, distúrbios do sono, problemas visuais, ansiedade, estresse ou depressão. Sempre recomendamos buscar um profissional de saude.</p>
     </div>
   </div>
   <div class="sobre-page" id="sobre-1">
     <div class="sobre-card">
       <p><strong>O Impacto das Telas</strong></p>
-      <p>Uma pesquisa de 2023 do Jornal da USP apontou que a populacao brasileira passa, em media, 56,6% do dia (cerca de 9 horas) em frente as telas, relatando maior frequencia de sintomas de transtornos.</p>
+      <p>Uma pesquisa de 2023 do Jornal da USP apontou que a população brasileira passa, em média, 56,6% do dia (cerca de 9 horas) em frente as telas, relatando maior frequência de sintomas de transtornos.</p>
       <ul>
-        <li><strong>Deficits Cognitivos</strong> &mdash; Diminuicao da memoria, dificuldade de concentracao e prejuizo na capacidade de planejar.</li>
-        <li><strong>Disturbios do Sono</strong> &mdash; A luz azul atrasa o descanso e prejudica o desempenho no dia seguinte.</li>
+        <li><strong>Déficits Cognitivos</strong> &mdash; Diminuição da memória, dificuldade de concentração e prejuízo na capacidade de planejar.</li>
+        <li><strong>Distúrbios do Sono</strong> &mdash; A luz azul atrasa o descanso e prejudica o desempenho no dia seguinte.</li>
       </ul>
     </div>
   </div>
@@ -299,27 +232,28 @@
     <div class="sobre-card">
       <p><strong>Mais Sintomas do Excesso de Telas</strong></p>
       <ul>
-        <li><strong>Problemas Emocionais</strong> &mdash; Ansiedade, estresse e depressao, especialmente pelo uso de redes sociais.</li>
-        <li><strong>Danos a Visao</strong> &mdash; Fadiga ocular, olhos secos e dores de cabeca.</li>
-        <li><strong>Sedentarismo</strong> &mdash; Postura inadequada levando a dores musculares e problemas ortopedicos.</li>
+        <li><strong>Problemas Emocionais</strong> &mdash; Ansiedade, estresse e depressão, especialmente pelo uso de redes sociais.</li>
+        <li><strong>Danos a Visão</strong> &mdash; Fadiga ocular, olhos secos e dores de cabeca.</li>
+        <li><strong>Sedentarismo</strong> &mdash; Postura inadequada levando a dores musculares e problemas ortopédicos.</li>
         <li><strong>Desenvolvimento Infantil</strong> &mdash; Atrasos na linguagem e risco aumentado de TDAH em criancas.</li>
       </ul>
     </div>
   </div>
-
-  <div class="footer-bar" style="margin-top:auto;padding-top:20px;">
-    <div class="footer-copy" style="margin:0 auto;">&#169; +Foco</div>
+  <div class="sobre-page" id="sobre-3">
+    <div class="sobre-card">
+      <p><strong>Agradecimentos</strong></p>
+      <p>Felipe Mitraud Kraft e Enzo Carvalho Martins agradecem imensamente a todas as pessoas que utilizam o +FOCO e aproveitam suas funcionalidades no dia a dia.</p>
+      <p>Agradecemos também, de coração, o apoio e auxílio dos professores e instrutores Alexandre Neves Louzada e Lauro Victor Ramos Cavadas, fundamentais para a realização deste projeto.</p>
+      <p>O +FOCO nasceu como Trabalho de Conclusão de Curso (TCC) dos alunos Enzo e Felipe, e chegar até aqui só foi possível graças a todo esse apoio. Muito obrigado! &#9829;</p>
+    </div>
   </div>
+  <div class="footer-bar" style="margin-top:auto;padding-top:20px;"><div class="footer-copy" style="margin:0 auto;">&#169; +Foco</div></div>
 </div>
-
 </div><!-- /app -->
-
 <!-- TOAST -->
 <div id="stars-overlay"></div>
-
 <!-- TOAST -->
 <div class="global-toast" id="global-toast"></div>
-
 <!-- MODAL -->
 <div class="modal-overlay" id="modal-overlay">
   <div class="modal">
@@ -331,7 +265,6 @@
     </div>
   </div>
 </div>
-
 <script src="script.js"></script>
 </body>
 </html>
